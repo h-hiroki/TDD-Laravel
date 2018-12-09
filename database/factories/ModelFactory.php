@@ -35,7 +35,7 @@ $factory->define(App\Thread::class, function (Faker $faker) {
 
 $factory->define(App\Reply::class, function (Faker $faker) {
     return [
-        'user_id' => function () {
+        'thread_id' => function () {
             return factory('App\Thread')->create()->id;
         },
         'user_id' => function () {
